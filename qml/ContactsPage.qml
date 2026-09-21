@@ -294,7 +294,8 @@ Page {
                 ListItemText {
                     width: parent.width
                     role: "Title"
-                    text: model.nick
+                    // nickname and UIN together; a contact without a nickname is just the UIN
+                    text: model.nick != model.uin ? model.nick + "  " + model.uin : model.uin
                     elide: Text.ElideRight
                     color: model.online ? platformStyle.colorNormalLight : platformStyle.colorNormalMid
                 }

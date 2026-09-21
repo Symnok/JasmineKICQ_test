@@ -1,14 +1,11 @@
 Setting up environment for Qt Symbian 3 usage...
-version 0.1.12 -> 0.1.13
-=== building JasmineKICQ 0.1.13
+version 0.1.13 -> 0.1.14
+=== building JasmineKICQ 0.1.14
 Qt: Untested Windows version 6.2 detected!
 Qt: Untested Windows version 6.2 detected!
 Qt: Untested Windows version 6.2 detected!
 WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backslashes are deprecated.
- qt-tools   : D:\GitHub\SymnokRepos\JasmineKICQ\qrc_translations.cpp  	[arm.v5.urel.gcce4_4_1]
  qt-tools   : D:\GitHub\SymnokRepos\JasmineKICQ\qrc_qml.cpp  	[arm.v5.urel.gcce4_4_1]
- qt-tools   : D:\GitHub\SymnokRepos\JasmineKICQ\moc_contactsmodel.cpp  	[arm.v5.urel.gcce4_4_1]
- qt-tools   : D:\GitHub\SymnokRepos\JasmineKICQ\moc_icqsession.cpp  	[arm.v5.urel.gcce4_4_1]
  mifconv    : BITMAP  	[arm.v5.urel.gcce4_4_1]
  resource   : epoc32\build\jasminekicq\c_dbb3b7751ca43c26\JasmineKICQ_exe\JasmineKICQ_JasmineKICQ.rsc  	[arm.v5.urel.gcce4_4_1]
  resource   : epoc32\build\jasminekicq\c_dbb3b7751ca43c26\JasmineKICQ_reg_exe\JasmineKICQ_reg_JasmineKICQ_reg.rsc  	[arm.v5.urel.gcce4_4_1]
@@ -425,6 +422,41 @@ WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backsla
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c: In function 'std::streamsize stlp_priv::__read_buffered(std::basic_istream<_CharT, _Traits>*, std::basic_streambuf<_CharT, _Traits>*, std::streamsize, _CharT*, _Is_Delim, _Scan_Delim, bool, bool, bool)':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c:650: warning: suggest parentheses around '&&' within '||'
    
+ compile    : src\app\historystore.cpp  	[arm.v5.urel.gcce4_4_1]
+   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32cmn.h:1129,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32std.h:31,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic_symbian.h:46,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic_arch.h:86,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qbasicatomic.h:227,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic.h:46,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qbytearray.h:45,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QByteArray:1,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.h:10,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.cpp:3:
+   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32des8.h:230: note: the mangling of 'va_list' has changed in GCC 4.4
+   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.h:194,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_ostream.c:26,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_ostream.h:385,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_string_io.h:23,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/string:38,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qdatetime.h:45,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QDateTime:1,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.h:11,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.cpp:3:
+   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c: In function '_OutputIter stlp_priv::__copy_integer_and_fill(const _CharT*, ptrdiff_t, _OutputIter, int, std::streamsize, _CharT, _CharT, _CharT)':
+   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c:162: warning: suggest parentheses around '&&' within '||'
+   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.h:355,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_string_io.h:27,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/string:38,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qdatetime.h:45,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QDateTime:1,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.h:11,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.cpp:3:
+   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c: In function 'std::streamsize stlp_priv::__read_buffered(std::basic_istream<_CharT, _Traits>*, std::basic_streambuf<_CharT, _Traits>*, std::streamsize, _CharT*, _Is_Delim, _Scan_Delim, bool, bool, bool)':
+   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c:650: warning: suggest parentheses around '&&' within '||'
+   
  compile    : src\core\icqtext.cpp  	[arm.v5.urel.gcce4_4_1]
    In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32cmn.h:1129,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32std.h:31,
@@ -490,41 +522,6 @@ WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backsla
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QDateTime:1,
                     from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.h:9,
                     from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.cpp:3:
-   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c: In function 'std::streamsize stlp_priv::__read_buffered(std::basic_istream<_CharT, _Traits>*, std::basic_streambuf<_CharT, _Traits>*, std::streamsize, _CharT*, _Is_Delim, _Scan_Delim, bool, bool, bool)':
-   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c:650: warning: suggest parentheses around '&&' within '||'
-   
- compile    : src\app\historystore.cpp  	[arm.v5.urel.gcce4_4_1]
-   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32cmn.h:1129,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32std.h:31,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic_symbian.h:46,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic_arch.h:86,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qbasicatomic.h:227,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic.h:46,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qbytearray.h:45,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QByteArray:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.h:10,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.cpp:3:
-   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32des8.h:230: note: the mangling of 'va_list' has changed in GCC 4.4
-   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.h:194,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_ostream.c:26,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_ostream.h:385,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_string_io.h:23,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/string:38,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qdatetime.h:45,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QDateTime:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.h:11,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.cpp:3:
-   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c: In function '_OutputIter stlp_priv::__copy_integer_and_fill(const _CharT*, ptrdiff_t, _OutputIter, int, std::streamsize, _CharT, _CharT, _CharT)':
-   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c:162: warning: suggest parentheses around '&&' within '||'
-   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.h:355,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_string_io.h:27,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/string:38,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qdatetime.h:45,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QDateTime:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.h:11,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/historystore.cpp:3:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c: In function 'std::streamsize stlp_priv::__read_buffered(std::basic_istream<_CharT, _Traits>*, std::basic_streambuf<_CharT, _Traits>*, std::streamsize, _CharT*, _Is_Delim, _Scan_Delim, bool, bool, bool)':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c:650: warning: suggest parentheses around '&&' within '||'
    
@@ -700,7 +697,7 @@ built 'arm.v5.urel.gcce4_4_1'
 
 Run time 6 seconds
 
-sbs: build log in D:\QtSDK\Symbian\SDKs\SymbianSR1Qt474\epoc32\build\Makefile.2026-09-21-16-39-07.61-40744.log
+sbs: build log in D:\QtSDK\Symbian\SDKs\SymbianSR1Qt474\epoc32\build\Makefile.2026-09-21-16-40-08.15-40996.log
 Auto-patching self-signed package.
 
 Patching package file and relevant binaries...
@@ -715,5 +712,5 @@ Processing JasmineKICQ_installer___temp.pkg...
 Created  JasmineKICQ_installer_unsigned.sis.
 Successfully created signed package JasmineKICQ_installer.sis for release-armv5 using certificate: Self Signed!
 
-built JasmineKICQ_0.1.13.sis 
-built JasmineKICQ_installer_0.1.13.sis 
+built JasmineKICQ_0.1.14.sis 
+built JasmineKICQ_installer_0.1.14.sis 

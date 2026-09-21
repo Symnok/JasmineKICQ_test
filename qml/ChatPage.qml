@@ -68,7 +68,12 @@ Page {
         }
         Column {
             anchors { left: peerDaisy.right; leftMargin: platformStyle.paddingLarge; right: parent.right; rightMargin: platformStyle.paddingLarge; verticalCenter: parent.verticalCenter }
-            Label { width: parent.width; text: chat.title; elide: Text.ElideRight; font.bold: true }
+            Label {
+                width: parent.width
+                text: chat.title != chat.uin ? chat.title + "  " + chat.uin : chat.uin
+                elide: Text.ElideRight
+                font.bold: true
+            }
             Label {
                 width: parent.width
                 font.pixelSize: platformStyle.fontSizeSmall
