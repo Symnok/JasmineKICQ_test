@@ -114,10 +114,8 @@ QString MessagesModel::peerSubtitle() const
 {
     QVariantMap c = m_contacts->contactInfo(m_uin);
     if (c.value(QLatin1String("typing")).toBool()) return tr("typing...");
-    QString away = c.value(QLatin1String("awayText")).toString();
-    QString status = c.value(QLatin1String("statusText")).toString();
-    if (!away.isEmpty()) return status + QLatin1String(": ") + away;
-    return status;
+    // the daisy shows the status itself; only an away text adds information
+    return c.value(QLatin1String("awayText")).toString();
 }
 
 void MessagesModel::onContactChanged(const QString &uin)

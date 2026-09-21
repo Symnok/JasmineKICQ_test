@@ -72,7 +72,8 @@ Page {
             Label {
                 width: parent.width
                 font.pixelSize: platformStyle.fontSizeSmall
-                text: chat.title != chat.uin ? chat.uin + "  ·  " + chat.peerSubtitle : chat.peerSubtitle
+                text: chat.title != chat.uin && chat.peerSubtitle != "" ? chat.uin + "  ·  " + chat.peerSubtitle
+                    : (chat.title != chat.uin ? chat.uin : chat.peerSubtitle)
                 elide: Text.ElideRight
                 color: chat.peerTyping ? "#8fd18f" : platformStyle.colorNormalMid
             }

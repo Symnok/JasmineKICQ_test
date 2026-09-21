@@ -135,7 +135,7 @@ QVariant ContactsModel::data(const QModelIndex &index, int role) const
         if (!c.awayText.isEmpty()) return c.awayText;
         QString last = m_lastText.value(c.uin);
         if (!last.isEmpty()) return last.simplified();
-        return c.online() ? statusText(c.status) : QString();
+        return QString();   // the plain status is the daisy's job
     }
     default: return QVariant();
     }
