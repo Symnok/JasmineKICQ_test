@@ -23,6 +23,7 @@
 #include <QTimer>
 #include <QUrl>
 #include <QDebug>
+#include <QEvent>
 
 #ifndef APP_VERSION
 #define APP_VERSION 0.0.0
@@ -80,6 +81,16 @@ AppController::AppController(QObject *parent)
     m_reconnect = new QTimer(this);
     m_reconnect->setSingleShot(true);
     connect(m_reconnect, SIGNAL(timeout()), this, SLOT(onReconnectTimer()));
+
+    qApp->installEventFilter(this);
+}
+
+bool AppController::eventFilter(QObject *watched, QEvent *event)
+{
+    // Back in front: whatever was announced in the notification panel has been seen.
+    if (event->type() == QEvent::ApplicationActivate && m_notifier->pendingCount() > 0)
+        m_notifier->setPendingCount(0);
+    return QObject::eventFilter(watched, event);
 }
 
 AppController::~AppController()
@@ -370,6 +381,7 @@ void AppController::onMessage(const QString &uin, const QString &text, const QDa
     if (!appInForeground()) {
         QString who = m_contacts->contactInfo(uin).value(QLatin1String("nick")).toString();
         m_notifier->notify(who, text);
+        m_notifier->setPendingCount(m_notifier->pendingCount() + 1);
     }
 }
 

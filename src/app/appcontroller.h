@@ -92,6 +92,9 @@ public:
     void start();
     static QString effectiveLanguage(const QSettings &settings);
 
+    /// Watches the application coming to the foreground (clears the panel notification).
+    bool eventFilter(QObject *watched, QEvent *event);
+
 public slots:
     void login(const QString &uin, const QString &password, bool remember);
     void signOut();

@@ -24,10 +24,14 @@ public:
     void notify(const QString &title, const QString &text);
     /// Just the vibration, e.g. for an authorization request.
     void vibrate(int ms = 400);
+    /// Persistent entry in the notification panel: "N new messages". 0 removes it.
+    void setPendingCount(int count);
+    int pendingCount() const { return m_pending; }
 
 private:
     bool m_vibrate;
     bool m_popups;
+    int m_pending;
 };
 
 #endif // NOTIFIER_H
