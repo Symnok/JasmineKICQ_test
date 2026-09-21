@@ -1,10 +1,11 @@
 Setting up environment for Qt Symbian 3 usage...
-version 0.1.10 -> 0.1.11
-=== building JasmineKICQ 0.1.11
+version 0.1.11 -> 0.1.12
+=== building JasmineKICQ 0.1.12
 Qt: Untested Windows version 6.2 detected!
 Qt: Untested Windows version 6.2 detected!
 Qt: Untested Windows version 6.2 detected!
 WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backslashes are deprecated.
+ qt-tools   : D:\GitHub\SymnokRepos\JasmineKICQ\qrc_translations.cpp  	[arm.v5.urel.gcce4_4_1]
  mifconv    : BITMAP  	[arm.v5.urel.gcce4_4_1]
  resource   : epoc32\build\jasminekicq\c_dbb3b7751ca43c26\JasmineKICQ_exe\JasmineKICQ_JasmineKICQ.rsc  	[arm.v5.urel.gcce4_4_1]
  resource   : epoc32\build\jasminekicq\c_dbb3b7751ca43c26\JasmineKICQ_reg_exe\JasmineKICQ_reg_JasmineKICQ_reg.rsc  	[arm.v5.urel.gcce4_4_1]
@@ -696,7 +697,7 @@ built 'arm.v5.urel.gcce4_4_1'
 
 Run time 6 seconds
 
-sbs: build log in D:\QtSDK\Symbian\SDKs\SymbianSR1Qt474\epoc32\build\Makefile.2026-09-21-16-32-34.76-41492.log
+sbs: build log in D:\QtSDK\Symbian\SDKs\SymbianSR1Qt474\epoc32\build\Makefile.2026-09-21-16-33-07.64-38500.log
 Auto-patching self-signed package.
 
 Patching package file and relevant binaries...
@@ -711,5 +712,5 @@ Processing JasmineKICQ_installer___temp.pkg...
 Created  JasmineKICQ_installer_unsigned.sis.
 Successfully created signed package JasmineKICQ_installer.sis for release-armv5 using certificate: Self Signed!
 
-built JasmineKICQ_0.1.11.sis 
-built JasmineKICQ_installer_0.1.11.sis 
+built JasmineKICQ_0.1.12.sis 
+built JasmineKICQ_installer_0.1.12.sis 
