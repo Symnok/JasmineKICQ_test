@@ -6,15 +6,10 @@
 
 #ifdef Q_OS_SYMBIAN
 #include <akndiscreetpopup.h>
-#include <AknSoftNotifier.h>
-#include <AknSoftNotificationParameters.h>
+#include <AknSmallIndicator.h>
 #include <avkon.hrh>
-#include <avkon.rsg>
-#include <coemain.h>
 #include <e32std.h>
-#include <f32file.h>
 #include <hwrmvibra.h>
-#include <kicqnotes.rsg>
 
 #ifndef KICQ_UID3
 #define KICQ_UID3 0xE2C9A7D1
@@ -22,9 +17,6 @@
 
 namespace
 {
-    _LIT(KNotesFile, "kicqnotes.rsc");
-    _LIT(KNotesDir, "\\resource\\apps\\");
-
     TPtrC ptr(const QString &s)
     {
         return TPtrC(reinterpret_cast<const TUint16 *>(s.utf16()), s.length());
@@ -46,28 +38,13 @@ namespace
         CleanupStack::PopAndDestroy(v);
     }
 
-    // The soft notification parameters point at the note resource installed with the app;
-    // the file is looked up on the drives, as the user may have installed to E: or F:.
-    CAknSoftNotificationParameters *notificationParamsL()
+    // The "new message" envelope in the status bar - the same small indicator the messaging
+    // application lights up. It stays until the app comes to the foreground.
+    void setEnvelopeL(bool on)
     {
-        RFs &fs = CCoeEnv::Static()->FsSession();
-        TFindFile finder(fs);
-        User::LeaveIfError(finder.FindByDir(KNotesFile, KNotesDir));
-        CAknSoftNotificationParameters *p = CAknSoftNotificationParameters::NewL(
-            finder.File(), R_KICQ_NOTE_MESSAGE, 0, R_AVKON_SOFTKEYS_SHOW_EXIT, CAknNoteDialog::ENoTone,
-            TVwsViewId(TUid::Uid(KICQ_UID3), TUid::Uid(0)), TUid::Uid(0), EAknSoftkeyShow, KNullDesC8);
-        p->SetGroupedTexts(R_KICQ_GROUPED_TEXTS);
-        return p;
-    }
-
-    void setSoftNotificationL(int count)
-    {
-        CAknSoftNotificationParameters *params = notificationParamsL();
-        CleanupStack::PushL(params);
-        CAknSoftNotifier *notifier = CAknSoftNotifier::NewLC();
-        if (count > 0) notifier->SetCustomNotificationCountL(*params, count);
-        else notifier->CancelCustomSoftNotificationL(*params);
-        CleanupStack::PopAndDestroy(2, params);
+        CAknSmallIndicator *ind = CAknSmallIndicator::NewLC(TUid::Uid(EAknIndicatorEnvelope));
+        ind->SetIndicatorStateL(on ? EAknIndicatorStateOn : EAknIndicatorStateOff);
+        CleanupStack::PopAndDestroy(ind);
     }
 }
 #endif
@@ -108,9 +85,9 @@ void Notifier::setPendingCount(int count)
     m_pending = count;
 #ifdef Q_OS_SYMBIAN
     TInt err = KErrNone;
-    TRAP(err, setSoftNotificationL(count));
-    if (err != KErrNone) qWarning() << "soft notification failed:" << err;
+    TRAP(err, setEnvelopeL(count > 0));
+    if (err != KErrNone) qWarning() << "envelope indicator failed:" << err;
 #else
-    qDebug() << "SOFT-NOTIFICATION count" << count;
+    qDebug() << "ENVELOPE" << (count > 0 ? "on" : "off") << count;
 #endif
 }

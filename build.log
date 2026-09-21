@@ -1,10 +1,9 @@
 Setting up environment for Qt Symbian 3 usage...
-version 0.1.5 -> 0.1.6
-=== building JasmineKICQ 0.1.6
+version 0.1.7 -> 0.1.8
+=== building JasmineKICQ 0.1.8
 Qt: Untested Windows version 6.2 detected!
 Qt: Untested Windows version 6.2 detected!
 Qt: Untested Windows version 6.2 detected!
-WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backslashes are deprecated.
  mifconv    : BITMAP  	[arm.v5.urel.gcce4_4_1]
  resource   : epoc32\build\jasminekicq\c_dbb3b7751ca43c26\JasmineKICQ_exe\JasmineKICQ_JasmineKICQ.rsc  	[arm.v5.urel.gcce4_4_1]
  resource   : epoc32\build\jasminekicq\c_dbb3b7751ca43c26\JasmineKICQ_reg_exe\JasmineKICQ_reg_JasmineKICQ_reg.rsc  	[arm.v5.urel.gcce4_4_1]
@@ -173,7 +172,7 @@ WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backsla
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:46,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qobject.h:48,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QObject:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:11,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:12,
                     from D:/GitHub/SymnokRepos/JasmineKICQ/moc_notifier.cpp:10:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32des8.h:230: note: the mangling of 'va_list' has changed in GCC 4.4
    In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.h:194,
@@ -184,7 +183,7 @@ WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backsla
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qobject.h:48,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QObject:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:11,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:12,
                     from D:/GitHub/SymnokRepos/JasmineKICQ/moc_notifier.cpp:10:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c: In function '_OutputIter stlp_priv::__copy_integer_and_fill(const _CharT*, ptrdiff_t, _OutputIter, int, std::streamsize, _CharT, _CharT, _CharT)':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c:162: warning: suggest parentheses around '&&' within '||'
@@ -194,7 +193,7 @@ WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backsla
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qobject.h:48,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QObject:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:11,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:12,
                     from D:/GitHub/SymnokRepos/JasmineKICQ/moc_notifier.cpp:10:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c: In function 'std::streamsize stlp_priv::__read_buffered(std::basic_istream<_CharT, _Traits>*, std::basic_streambuf<_CharT, _Traits>*, std::streamsize, _CharT*, _Is_Delim, _Scan_Delim, bool, bool, bool)':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c:650: warning: suggest parentheses around '&&' within '||'
@@ -535,7 +534,7 @@ WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backsla
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:46,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qobject.h:48,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QObject:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:11,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:12,
                     from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:3:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32des8.h:230: note: the mangling of 'va_list' has changed in GCC 4.4
    In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.h:194,
@@ -546,7 +545,7 @@ WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backsla
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qobject.h:48,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QObject:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:11,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:12,
                     from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:3:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c: In function '_OutputIter stlp_priv::__copy_integer_and_fill(const _CharT*, ptrdiff_t, _OutputIter, int, std::streamsize, _CharT, _CharT, _CharT)':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c:162: warning: suggest parentheses around '&&' within '||'
@@ -556,7 +555,7 @@ WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backsla
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qobject.h:48,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QObject:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:11,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.h:12,
                     from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:3:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c: In function 'std::streamsize stlp_priv::__read_buffered(std::basic_istream<_CharT, _Traits>*, std::basic_streambuf<_CharT, _Traits>*, std::streamsize, _CharT*, _Is_Delim, _Scan_Delim, bool, bool, bool)':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c:650: warning: suggest parentheses around '&&' within '||'
@@ -694,9 +693,9 @@ sbs : errors: 0
 
 built 'arm.v5.urel.gcce4_4_1'
 
-Run time 6 seconds
+Run time 5 seconds
 
-sbs: build log in D:\QtSDK\Symbian\SDKs\SymbianSR1Qt474\epoc32\build\Makefile.2026-09-21-16-12-50.96-6016.log
+sbs: build log in D:\QtSDK\Symbian\SDKs\SymbianSR1Qt474\epoc32\build\Makefile.2026-09-21-16-21-24.43-39952.log
 Auto-patching self-signed package.
 
 Patching package file and relevant binaries...
@@ -711,5 +710,5 @@ Processing JasmineKICQ_installer___temp.pkg...
 Created  JasmineKICQ_installer_unsigned.sis.
 Successfully created signed package JasmineKICQ_installer.sis for release-armv5 using certificate: Self Signed!
 
-built JasmineKICQ_0.1.6.sis 
-built JasmineKICQ_installer_0.1.6.sis 
+built JasmineKICQ_0.1.8.sis 
+built JasmineKICQ_installer_0.1.8.sis 
