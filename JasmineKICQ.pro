@@ -7,7 +7,7 @@
 
 TEMPLATE = app
 TARGET = JasmineKICQ
-VERSION = 0.1.4
+VERSION = 0.1.6
 
 QT += core gui network declarative
 
@@ -54,7 +54,7 @@ symbian {
 
     # Discreet popups (avkon), soft notifications (aknnotify) and vibration (hwrm) for the
     # notifier; the soft notification texts are a compiled resource deployed next to the app.
-    LIBS += -lavkon -laknnotify -lhwrmvibraclient -lcone -leikcore -lefsrv
+    LIBS += -lavkon -laknnotify -laknnotifyplugin -lhwrmvibraclient -lcone -leikcore -lefsrv
     INCLUDEPATH += $$[QT_INSTALL_PREFIX]/epoc32/include/platform/mw
     MMP_RULES += "SOURCEPATH ." "START RESOURCE kicqnotes.rss" "HEADER" "TARGETPATH resource\apps" "END"
     notes.sources = $${EPOCROOT}epoc32/data/z/resource/apps/kicqnotes.rsc

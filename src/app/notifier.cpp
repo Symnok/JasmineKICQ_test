@@ -23,7 +23,7 @@
 namespace
 {
     _LIT(KNotesFile, "kicqnotes.rsc");
-    _LIT(KNotesDir, "\resource\apps\\");
+    _LIT(KNotesDir, "\\resource\\apps\\");
 
     TPtrC ptr(const QString &s)
     {
