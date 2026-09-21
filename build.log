@@ -1,9 +1,10 @@
 Setting up environment for Qt Symbian 3 usage...
-version 0.1.7 -> 0.1.8
-=== building JasmineKICQ 0.1.8
+version 0.1.10 -> 0.1.11
+=== building JasmineKICQ 0.1.11
 Qt: Untested Windows version 6.2 detected!
 Qt: Untested Windows version 6.2 detected!
 Qt: Untested Windows version 6.2 detected!
+WARNING: d:\GitHub\SymnokRepos\JasmineKICQ\JasmineKICQ.pro:59: Unescaped backslashes are deprecated.
  mifconv    : BITMAP  	[arm.v5.urel.gcce4_4_1]
  resource   : epoc32\build\jasminekicq\c_dbb3b7751ca43c26\JasmineKICQ_exe\JasmineKICQ_JasmineKICQ.rsc  	[arm.v5.urel.gcce4_4_1]
  resource   : epoc32\build\jasminekicq\c_dbb3b7751ca43c26\JasmineKICQ_reg_exe\JasmineKICQ_reg_JasmineKICQ_reg.rsc  	[arm.v5.urel.gcce4_4_1]
@@ -420,41 +421,6 @@ Qt: Untested Windows version 6.2 detected!
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c: In function 'std::streamsize stlp_priv::__read_buffered(std::basic_istream<_CharT, _Traits>*, std::basic_streambuf<_CharT, _Traits>*, std::streamsize, _CharT*, _Is_Delim, _Scan_Delim, bool, bool, bool)':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c:650: warning: suggest parentheses around '&&' within '||'
    
- compile    : src\core\icqtypes.cpp  	[arm.v5.urel.gcce4_4_1]
-   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32cmn.h:1129,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32std.h:31,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic_symbian.h:46,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic_arch.h:86,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qbasicatomic.h:227,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic.h:46,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qbytearray.h:45,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QByteArray:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.h:8,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.cpp:3:
-   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32des8.h:230: note: the mangling of 'va_list' has changed in GCC 4.4
-   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.h:194,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_ostream.c:26,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_ostream.h:385,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_string_io.h:23,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/string:38,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qdatetime.h:45,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QDateTime:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.h:9,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.cpp:3:
-   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c: In function '_OutputIter stlp_priv::__copy_integer_and_fill(const _CharT*, ptrdiff_t, _OutputIter, int, std::streamsize, _CharT, _CharT, _CharT)':
-   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c:162: warning: suggest parentheses around '&&' within '||'
-   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.h:355,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_string_io.h:27,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/string:38,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qdatetime.h:45,
-                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QDateTime:1,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.h:9,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.cpp:3:
-   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c: In function 'std::streamsize stlp_priv::__read_buffered(std::basic_istream<_CharT, _Traits>*, std::basic_streambuf<_CharT, _Traits>*, std::streamsize, _CharT*, _Is_Delim, _Scan_Delim, bool, bool, bool)':
-   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c:650: warning: suggest parentheses around '&&' within '||'
-   
  compile    : src\core\icqtext.cpp  	[arm.v5.urel.gcce4_4_1]
    In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32cmn.h:1129,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32std.h:31,
@@ -523,6 +489,41 @@ Qt: Untested Windows version 6.2 detected!
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c: In function 'std::streamsize stlp_priv::__read_buffered(std::basic_istream<_CharT, _Traits>*, std::basic_streambuf<_CharT, _Traits>*, std::streamsize, _CharT*, _Is_Delim, _Scan_Delim, bool, bool, bool)':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c:650: warning: suggest parentheses around '&&' within '||'
    
+ compile    : src\core\icqtypes.cpp  	[arm.v5.urel.gcce4_4_1]
+   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32cmn.h:1129,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32std.h:31,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic_symbian.h:46,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic_arch.h:86,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qbasicatomic.h:227,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qatomic.h:46,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qbytearray.h:45,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QByteArray:1,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.h:8,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.cpp:3:
+   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32des8.h:230: note: the mangling of 'va_list' has changed in GCC 4.4
+   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.h:194,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_ostream.c:26,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_ostream.h:385,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_string_io.h:23,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/string:38,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qdatetime.h:45,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QDateTime:1,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.h:9,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.cpp:3:
+   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c: In function '_OutputIter stlp_priv::__copy_integer_and_fill(const _CharT*, ptrdiff_t, _OutputIter, int, std::streamsize, _CharT, _CharT, _CharT)':
+   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_num_put.c:162: warning: suggest parentheses around '&&' within '||'
+   In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.h:355,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_string_io.h:27,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/string:38,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qstring.h:60,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/qdatetime.h:45,
+                    from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/include/QtCore/QDateTime:1,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.h:9,
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/core/icqtypes.cpp:3:
+   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c: In function 'std::streamsize stlp_priv::__read_buffered(std::basic_istream<_CharT, _Traits>*, std::basic_streambuf<_CharT, _Traits>*, std::streamsize, _CharT*, _Is_Delim, _Scan_Delim, bool, bool, bool)':
+   D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/stdapis/stlportv5/stl/_istream.c:650: warning: suggest parentheses around '&&' within '||'
+   
  compile    : src\app\notifier.cpp  	[arm.v5.urel.gcce4_4_1]
    In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32cmn.h:1129,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32std.h:31,
@@ -565,7 +566,7 @@ Qt: Untested Windows version 6.2 detected!
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/w32std.h:25,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/mw/coemain.h:23,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/platform/mw/akndiscreetpopup.h:25,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:8:
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:10:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/platform/d32locd.h: At global scope:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/platform/d32locd.h:219: warning: invalid access to non-static data member 'TLocalDriveCaps::iSize'  of NULL object
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/platform/d32locd.h:219: warning: (perhaps the 'offsetof' macro was used incorrectly)
@@ -577,7 +578,7 @@ Qt: Untested Windows version 6.2 detected!
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/w32std.h:25,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/mw/coemain.h:23,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/platform/mw/akndiscreetpopup.h:25,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:8:
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:10:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32event.h: In constructor 'TRawEvent::TRawEvent()':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32event.h:271: warning: dereferencing type-punned pointer will break strict-aliasing rules
    In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/platform/e32svr.h:31,
@@ -586,14 +587,14 @@ Qt: Untested Windows version 6.2 detected!
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/w32std.h:25,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/mw/coemain.h:23,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/platform/mw/akndiscreetpopup.h:25,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:8:
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:10:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32event.h: In member function 'TRawEvent& TRawEventBuf::Event() const':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/e32event.h:437: warning: dereferencing type-punned pointer will break strict-aliasing rules
    In file included from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/fntstore.h:26,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/w32std.h:25,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/mw/coemain.h:23,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/platform/mw/akndiscreetpopup.h:25,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:8:
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:10:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/f32file.h: At global scope:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/f32file.h:2284: warning: invalid access to non-static data member 'TVolFormatParam::iUId'  of NULL object
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/f32file.h:2284: warning: (perhaps the 'offsetof' macro was used incorrectly)
@@ -601,7 +602,7 @@ Qt: Untested Windows version 6.2 detected!
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/w32std.h:25,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/mw/coemain.h:23,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/platform/mw/akndiscreetpopup.h:25,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:8:
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:10:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/openfont.h: In static member function 'static CShaperFactory* CShaperFactory::NewL(TUid)':
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/openfont.h:2464: warning: invalid access to non-static data member 'CShaperFactory::iDtor_ID_Key'  of NULL object
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/openfont.h:2464: warning: (perhaps the 'offsetof' macro was used incorrectly)
@@ -609,7 +610,7 @@ Qt: Untested Windows version 6.2 detected!
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/mw/coetextdrawer.h:23,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/mw/coemain.h:28,
                     from D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/platform/mw/akndiscreetpopup.h:25,
-                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:8:
+                    from D:/GitHub/SymnokRepos/JasmineKICQ/src/app/notifier.cpp:10:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/biditext.h: At global scope:
    D:/QtSDK/Symbian/SDKs/SymbianSR1Qt474/epoc32/include/biditext.h:25: warning: declaration 'enum CGraphicsContext::TTextAlign' does not declare anything
    
@@ -693,9 +694,9 @@ sbs : errors: 0
 
 built 'arm.v5.urel.gcce4_4_1'
 
-Run time 5 seconds
+Run time 6 seconds
 
-sbs: build log in D:\QtSDK\Symbian\SDKs\SymbianSR1Qt474\epoc32\build\Makefile.2026-09-21-16-21-24.43-39952.log
+sbs: build log in D:\QtSDK\Symbian\SDKs\SymbianSR1Qt474\epoc32\build\Makefile.2026-09-21-16-32-34.76-41492.log
 Auto-patching self-signed package.
 
 Patching package file and relevant binaries...
@@ -710,5 +711,5 @@ Processing JasmineKICQ_installer___temp.pkg...
 Created  JasmineKICQ_installer_unsigned.sis.
 Successfully created signed package JasmineKICQ_installer.sis for release-armv5 using certificate: Self Signed!
 
-built JasmineKICQ_0.1.8.sis 
-built JasmineKICQ_installer_0.1.8.sis 
+built JasmineKICQ_0.1.11.sis 
+built JasmineKICQ_installer_0.1.11.sis 

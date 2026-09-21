@@ -17,120 +17,130 @@
         <source>Statuses: green - online, yellow - away, red - busy, white - offline. Messages to offline contacts are stored by the server only when they are pure Latin, or Cyrillic without digits and punctuation - a limitation of the server.</source>
         <translation>Статусы: зелёный — в сети, жёлтый — отошёл, красный — занят, белый — не в сети. Сообщения контактам не в сети сервер сохраняет только если они целиком латиницей или кириллицей без цифр и знаков препинания — ограничение сервера.</translation>
     </message>
+    <message>
+        <location filename="../qml/AboutPage.qml" line="55" />
+        <source>Log</source>
+        <translation>Журнал</translation>
+    </message>
+    <message>
+        <location filename="../qml/AboutPage.qml" line="66" />
+        <source>Copy log</source>
+        <translation>Скопировать журнал</translation>
+    </message>
 </context>
 <context>
     <name>AppController</name>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="245" />
+        <location filename="../src/app/appcontroller.cpp" line="260" />
         <source>Enter your UIN and password.</source>
         <translation>Введите UIN и пароль.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="336" />
+        <location filename="../src/app/appcontroller.cpp" line="351" />
         <source>Connection lost: %1. Reconnecting...</source>
         <translation>Соединение потеряно: %1. Переподключение...</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="380" />
+        <location filename="../src/app/appcontroller.cpp" line="396" />
         <source>%1 (%2) asks for your authorization.</source>
         <translation>%1 (%2) запрашивает авторизацию.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="381" />
+        <location filename="../src/app/appcontroller.cpp" line="397" />
         <source>%1 (%2) asks for your authorization: %3</source>
         <translation>%1 (%2) запрашивает авторизацию: %3</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="383" />
+        <location filename="../src/app/appcontroller.cpp" line="399" />
         <source>asks for your authorization</source>
         <translation>запрашивает авторизацию</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="398" />
+        <location filename="../src/app/appcontroller.cpp" line="414" />
         <source>%1 authorized you.</source>
         <translation>%1 авторизовал(а) вас.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="398" />
+        <location filename="../src/app/appcontroller.cpp" line="414" />
         <source>%1 declined your authorization request.</source>
         <translation>%1 отклонил(а) запрос авторизации.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="403" />
+        <location filename="../src/app/appcontroller.cpp" line="419" />
         <source>%1 added you to their contact list.</source>
         <translation>%1 добавил(а) вас в свой список контактов.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="410" />
+        <location filename="../src/app/appcontroller.cpp" line="426" />
         <source>Contact %1 added.</source>
         <translation>Контакт %1 добавлен.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="411" />
+        <location filename="../src/app/appcontroller.cpp" line="427" />
         <source>%1 is already in the list.</source>
         <translation>%1 уже есть в списке.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="411" />
+        <location filename="../src/app/appcontroller.cpp" line="427" />
         <source>Could not add %1 (error %2).</source>
         <translation>Не удалось добавить %1 (ошибка %2).</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="414" />
+        <location filename="../src/app/appcontroller.cpp" line="430" />
         <source>Contact removed.</source>
         <translation>Контакт удалён.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="414" />
+        <location filename="../src/app/appcontroller.cpp" line="430" />
         <source>Could not remove the contact (error %1).</source>
         <translation>Не удалось удалить контакт (ошибка %1).</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="417" />
+        <location filename="../src/app/appcontroller.cpp" line="433" />
         <source>Could not rename the contact (error %1).</source>
         <translation>Не удалось переименовать контакт (ошибка %1).</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="420" />
+        <location filename="../src/app/appcontroller.cpp" line="436" />
         <source>Group "%1" created.</source>
         <translation>Группа «%1» создана.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="421" />
+        <location filename="../src/app/appcontroller.cpp" line="437" />
         <source>Group "%1" already exists.</source>
         <translation>Группа «%1» уже существует.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="421" />
+        <location filename="../src/app/appcontroller.cpp" line="437" />
         <source>Could not create the group (error %1).</source>
         <translation>Не удалось создать группу (ошибка %1).</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="461" />
+        <location filename="../src/app/appcontroller.cpp" line="477" />
         <source>A UIN is a number.</source>
         <translation>UIN — это число.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="464" />
-        <location filename="../src/app/appcontroller.cpp" line="470" />
-        <location filename="../src/app/appcontroller.cpp" line="478" />
-        <location filename="../src/app/appcontroller.cpp" line="484" />
-        <location filename="../src/app/appcontroller.cpp" line="490" />
+        <location filename="../src/app/appcontroller.cpp" line="480" />
+        <location filename="../src/app/appcontroller.cpp" line="486" />
+        <location filename="../src/app/appcontroller.cpp" line="494" />
+        <location filename="../src/app/appcontroller.cpp" line="500" />
+        <location filename="../src/app/appcontroller.cpp" line="506" />
         <source>Not connected.</source>
         <translation>Нет соединения.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="491" />
+        <location filename="../src/app/appcontroller.cpp" line="507" />
         <source>Please authorize me</source>
         <translation>Пожалуйста, авторизуйте меня</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="492" />
+        <location filename="../src/app/appcontroller.cpp" line="508" />
         <source>Authorization request sent.</source>
         <translation>Запрос авторизации отправлен.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="503" />
+        <location filename="../src/app/appcontroller.cpp" line="519" />
         <source>Copied.</source>
         <translation>Скопировано.</translation>
     </message>
@@ -179,17 +189,17 @@
         <translation>Повторить</translation>
     </message>
     <message>
-        <location filename="../qml/ChatPage.qml" line="119" />
+        <location filename="../qml/ChatPage.qml" line="121" />
         <source>No messages yet.</source>
         <translation>Сообщений пока нет.</translation>
     </message>
     <message>
-        <location filename="../qml/ChatPage.qml" line="135" />
+        <location filename="../qml/ChatPage.qml" line="137" />
         <source>message</source>
         <translation>сообщение</translation>
     </message>
     <message>
-        <location filename="../qml/ChatPage.qml" line="144" />
+        <location filename="../qml/ChatPage.qml" line="146" />
         <source>Send</source>
         <translation>Отправить</translation>
     </message>
@@ -364,32 +374,32 @@
         <translation>Скопировать UIN</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="241" />
+        <location filename="../qml/ContactsPage.qml" line="243" />
         <source>connecting...</source>
         <translation>подключение...</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="241" />
+        <location filename="../qml/ContactsPage.qml" line="243" />
         <source>offline</source>
         <translation>не в сети</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="340" />
+        <location filename="../qml/ContactsPage.qml" line="345" />
         <source>The contact list is empty. Tap + to add someone.</source>
         <translation>Список контактов пуст. Нажмите +, чтобы добавить кого-нибудь.</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="340" />
+        <location filename="../qml/ContactsPage.qml" line="345" />
         <source>Nobody is online.</source>
         <translation>Никого нет в сети.</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="341" />
+        <location filename="../qml/ContactsPage.qml" line="346" />
         <source>Connecting...</source>
         <translation>Подключение...</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="341" />
+        <location filename="../qml/ContactsPage.qml" line="346" />
         <source>Offline. Use the menu to connect.</source>
         <translation>Не в сети. Подключитесь через меню.</translation>
     </message>
@@ -628,17 +638,17 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../qml/main.qml" line="80" />
+        <location filename="../qml/main.qml" line="103" />
         <source>Authorization request</source>
         <translation>Запрос авторизации</translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="82" />
+        <location filename="../qml/main.qml" line="105" />
         <source>Authorize</source>
         <translation>Авторизовать</translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="83" />
+        <location filename="../qml/main.qml" line="106" />
         <source>Decline</source>
         <translation>Отклонить</translation>
     </message>

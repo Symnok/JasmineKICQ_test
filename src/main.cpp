@@ -17,11 +17,12 @@
 #include <QDateTime>
 #include <cstdio>
 
-// KICQ_LOG_FILE=<path>: qDebug/qWarning (including QML errors) go to that file - the only
-// way to see them from a GUI-subsystem build on Windows or on the phone.
+// qDebug/qWarning (including QML errors) are kept in a ring the About page shows, and go to
+// KICQ_LOG_FILE when set - the only way to see them from a GUI-subsystem build.
 static QFile *logFile = 0;
 static void fileMessageHandler(QtMsgType type, const char *msg)
 {
+    AppController::appendLog(QString::fromLatin1(type == QtDebugMsg ? "D " : type == QtWarningMsg ? "W " : "E ") + QString::fromLocal8Bit(msg));
     if (!logFile) return;
     QTextStream out(logFile);
     out << QDateTime::currentDateTime().toString(QLatin1String("HH:mm:ss.zzz ")) << (type == QtDebugMsg ? "D " : type == QtWarningMsg ? "W " : "E ") << msg << endl;
@@ -34,8 +35,9 @@ int main(int argc, char *argv[])
     const QByteArray logPath = qgetenv("KICQ_LOG_FILE");
     if (!logPath.isEmpty()) {
         logFile = new QFile(QString::fromLocal8Bit(logPath));
-        if (logFile->open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) qInstallMsgHandler(fileMessageHandler);
+        if (!logFile->open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) { delete logFile; logFile = 0; }
     }
+    qInstallMsgHandler(fileMessageHandler);
     app.setApplicationName(QLatin1String("JasmineKICQ"));
     app.setOrganizationName(QLatin1String("JasmineKICQ"));
     app.setQuitOnLastWindowClosed(true);

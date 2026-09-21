@@ -52,6 +52,8 @@ class AppController : public QObject
     Q_PROPERTY(QString authRequestText READ authRequestText NOTIFY authRequestChanged)
     /// Desktop testing: true when KICQ_SHOT_DIR is set; main.qml then walks the pages and shoots them.
     Q_PROPERTY(bool autotest READ autotest CONSTANT)
+    /// The last log lines (warnings, QML errors, notifier results) for the About page.
+    Q_PROPERTY(QString logTail READ logTail NOTIFY logChanged)
 public:
     explicit AppController(QObject *parent = 0);
     ~AppController();
@@ -87,6 +89,8 @@ public:
     QString authRequestUin() const { return m_authUin; }
     QString authRequestText() const { return m_authText; }
     bool autotest() const;
+    QString logTail() const;
+    static void appendLog(const QString &line);
 
     /// Opens the network, then signs in with the saved account or shows the sign-in page.
     void start();
@@ -126,6 +130,7 @@ signals:
     void authRequestChanged();
     /// A message arrived for a chat that is not open (the list page may want to react).
     void messageArrived(const QString &uin);
+    void logChanged();
 
 private slots:
     void onNetworkOpened();

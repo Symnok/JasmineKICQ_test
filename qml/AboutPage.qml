@@ -51,6 +51,21 @@ Page {
                 color: platformStyle.colorNormalMid
                 text: "GPL-2.0-or-later. Status daisies and X-status icons from Jasmine IM."
             }
+            Item { width: 1; height: platformStyle.paddingLarge }
+            Label { text: qsTr("Log"); font.bold: true }
+            Label {
+                width: parent.width
+                wrapMode: Text.WrapAnywhere
+                font.pixelSize: platformStyle.fontSizeSmall * 0.85
+                font.family: "monospace"
+                color: platformStyle.colorNormalMid
+                text: app.logTail
+            }
+            Button {
+                width: parent.width
+                text: qsTr("Copy log")
+                onClicked: app.copyText(app.logTail)
+            }
         }
     }
 }

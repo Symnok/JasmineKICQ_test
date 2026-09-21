@@ -47,6 +47,9 @@ namespace
     const int DefaultPort = 5190;
     const int ReconnectMinMs = 5000;
     const int ReconnectMaxMs = 60000;
+
+    QStringList &logLines() { static QStringList lines; return lines; }
+    AppController *logOwner = 0;
 }
 
 AppController::AppController(QObject *parent)
@@ -83,6 +86,7 @@ AppController::AppController(QObject *parent)
     connect(m_reconnect, SIGNAL(timeout()), this, SLOT(onReconnectTimer()));
 
     qApp->installEventFilter(this);
+    logOwner = this;
 }
 
 bool AppController::eventFilter(QObject *watched, QEvent *event)
@@ -513,6 +517,19 @@ void AppController::copyText(const QString &text)
 {
     QApplication::clipboard()->setText(text);
     setNotice(tr("Copied."));
+}
+
+void AppController::appendLog(const QString &line)
+{
+    QStringList &lines = logLines();
+    lines.append(QDateTime::currentDateTime().toString(QLatin1String("HH:mm:ss ")) + line);
+    while (lines.size() > 40) lines.removeFirst();
+    if (logOwner) emit logOwner->logChanged();
+}
+
+QString AppController::logTail() const
+{
+    return logLines().join(QLatin1String("\n"));
 }
 
 bool AppController::autotest() const

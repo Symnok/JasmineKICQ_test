@@ -17,120 +17,130 @@
         <source>Statuses: green - online, yellow - away, red - busy, white - offline. Messages to offline contacts are stored by the server only when they are pure Latin, or Cyrillic without digits and punctuation - a limitation of the server.</source>
         <translation>Статуси: зелений — у мережі, жовтий — відійшов, червоний — зайнятий, білий — не в мережі. Повідомлення контактам не в мережі сервер зберігає лише якщо вони повністю латиницею або кирилицею без цифр і розділових знаків — обмеження сервера.</translation>
     </message>
+    <message>
+        <location filename="../qml/AboutPage.qml" line="55" />
+        <source>Log</source>
+        <translation>Журнал</translation>
+    </message>
+    <message>
+        <location filename="../qml/AboutPage.qml" line="66" />
+        <source>Copy log</source>
+        <translation>Скопіювати журнал</translation>
+    </message>
 </context>
 <context>
     <name>AppController</name>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="245" />
+        <location filename="../src/app/appcontroller.cpp" line="260" />
         <source>Enter your UIN and password.</source>
         <translation>Введіть UIN і пароль.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="336" />
+        <location filename="../src/app/appcontroller.cpp" line="351" />
         <source>Connection lost: %1. Reconnecting...</source>
         <translation>З'єднання втрачено: %1. Повторне підключення...</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="380" />
+        <location filename="../src/app/appcontroller.cpp" line="396" />
         <source>%1 (%2) asks for your authorization.</source>
         <translation>%1 (%2) просить авторизацію.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="381" />
+        <location filename="../src/app/appcontroller.cpp" line="397" />
         <source>%1 (%2) asks for your authorization: %3</source>
         <translation>%1 (%2) просить авторизацію: %3</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="383" />
+        <location filename="../src/app/appcontroller.cpp" line="399" />
         <source>asks for your authorization</source>
         <translation>просить авторизацію</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="398" />
+        <location filename="../src/app/appcontroller.cpp" line="414" />
         <source>%1 authorized you.</source>
         <translation>%1 авторизував(ла) вас.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="398" />
+        <location filename="../src/app/appcontroller.cpp" line="414" />
         <source>%1 declined your authorization request.</source>
         <translation>%1 відхилив(ла) запит авторизації.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="403" />
+        <location filename="../src/app/appcontroller.cpp" line="419" />
         <source>%1 added you to their contact list.</source>
         <translation>%1 додав(ла) вас до свого списку контактів.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="410" />
+        <location filename="../src/app/appcontroller.cpp" line="426" />
         <source>Contact %1 added.</source>
         <translation>Контакт %1 додано.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="411" />
+        <location filename="../src/app/appcontroller.cpp" line="427" />
         <source>%1 is already in the list.</source>
         <translation>%1 уже є в списку.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="411" />
+        <location filename="../src/app/appcontroller.cpp" line="427" />
         <source>Could not add %1 (error %2).</source>
         <translation>Не вдалося додати %1 (помилка %2).</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="414" />
+        <location filename="../src/app/appcontroller.cpp" line="430" />
         <source>Contact removed.</source>
         <translation>Контакт видалено.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="414" />
+        <location filename="../src/app/appcontroller.cpp" line="430" />
         <source>Could not remove the contact (error %1).</source>
         <translation>Не вдалося видалити контакт (помилка %1).</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="417" />
+        <location filename="../src/app/appcontroller.cpp" line="433" />
         <source>Could not rename the contact (error %1).</source>
         <translation>Не вдалося перейменувати контакт (помилка %1).</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="420" />
+        <location filename="../src/app/appcontroller.cpp" line="436" />
         <source>Group "%1" created.</source>
         <translation>Групу «%1» створено.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="421" />
+        <location filename="../src/app/appcontroller.cpp" line="437" />
         <source>Group "%1" already exists.</source>
         <translation>Група «%1» уже існує.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="421" />
+        <location filename="../src/app/appcontroller.cpp" line="437" />
         <source>Could not create the group (error %1).</source>
         <translation>Не вдалося створити групу (помилка %1).</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="461" />
+        <location filename="../src/app/appcontroller.cpp" line="477" />
         <source>A UIN is a number.</source>
         <translation>UIN — це число.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="464" />
-        <location filename="../src/app/appcontroller.cpp" line="470" />
-        <location filename="../src/app/appcontroller.cpp" line="478" />
-        <location filename="../src/app/appcontroller.cpp" line="484" />
-        <location filename="../src/app/appcontroller.cpp" line="490" />
+        <location filename="../src/app/appcontroller.cpp" line="480" />
+        <location filename="../src/app/appcontroller.cpp" line="486" />
+        <location filename="../src/app/appcontroller.cpp" line="494" />
+        <location filename="../src/app/appcontroller.cpp" line="500" />
+        <location filename="../src/app/appcontroller.cpp" line="506" />
         <source>Not connected.</source>
         <translation>Немає з'єднання.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="491" />
+        <location filename="../src/app/appcontroller.cpp" line="507" />
         <source>Please authorize me</source>
         <translation>Будь ласка, авторизуйте мене</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="492" />
+        <location filename="../src/app/appcontroller.cpp" line="508" />
         <source>Authorization request sent.</source>
         <translation>Запит авторизації надіслано.</translation>
     </message>
     <message>
-        <location filename="../src/app/appcontroller.cpp" line="503" />
+        <location filename="../src/app/appcontroller.cpp" line="519" />
         <source>Copied.</source>
         <translation>Скопійовано.</translation>
     </message>
@@ -179,17 +189,17 @@
         <translation>Повторити</translation>
     </message>
     <message>
-        <location filename="../qml/ChatPage.qml" line="119" />
+        <location filename="../qml/ChatPage.qml" line="121" />
         <source>No messages yet.</source>
         <translation>Повідомлень поки немає.</translation>
     </message>
     <message>
-        <location filename="../qml/ChatPage.qml" line="135" />
+        <location filename="../qml/ChatPage.qml" line="137" />
         <source>message</source>
         <translation>повідомлення</translation>
     </message>
     <message>
-        <location filename="../qml/ChatPage.qml" line="144" />
+        <location filename="../qml/ChatPage.qml" line="146" />
         <source>Send</source>
         <translation>Надіслати</translation>
     </message>
@@ -364,32 +374,32 @@
         <translation>Скопіювати UIN</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="241" />
+        <location filename="../qml/ContactsPage.qml" line="243" />
         <source>connecting...</source>
         <translation>підключення...</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="241" />
+        <location filename="../qml/ContactsPage.qml" line="243" />
         <source>offline</source>
         <translation>не в мережі</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="340" />
+        <location filename="../qml/ContactsPage.qml" line="345" />
         <source>The contact list is empty. Tap + to add someone.</source>
         <translation>Список контактів порожній. Натисніть +, щоб когось додати.</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="340" />
+        <location filename="../qml/ContactsPage.qml" line="345" />
         <source>Nobody is online.</source>
         <translation>Нікого немає в мережі.</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="341" />
+        <location filename="../qml/ContactsPage.qml" line="346" />
         <source>Connecting...</source>
         <translation>Підключення...</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="341" />
+        <location filename="../qml/ContactsPage.qml" line="346" />
         <source>Offline. Use the menu to connect.</source>
         <translation>Не в мережі. Підключіться через меню.</translation>
     </message>
@@ -628,17 +638,17 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../qml/main.qml" line="80" />
+        <location filename="../qml/main.qml" line="103" />
         <source>Authorization request</source>
         <translation>Запит авторизації</translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="82" />
+        <location filename="../qml/main.qml" line="105" />
         <source>Authorize</source>
         <translation>Авторизувати</translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="83" />
+        <location filename="../qml/main.qml" line="106" />
         <source>Decline</source>
         <translation>Відхилити</translation>
     </message>

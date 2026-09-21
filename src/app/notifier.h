@@ -17,6 +17,7 @@ class Notifier : public QObject
     Q_OBJECT
 public:
     explicit Notifier(QObject *parent = 0);
+    ~Notifier();
 
     void setVibrate(bool on) { m_vibrate = on; }
     void setPopups(bool on) { m_popups = on; }
@@ -25,7 +26,8 @@ public:
     void notify(const QString &title, const QString &text);
     /// Just the vibration, e.g. for an authorization request.
     void vibrate(int ms = 400);
-    /// Lights the "new message" envelope in the status bar while count > 0.
+    /// Persistent "N new messages" entry (soft notification, shown in the notification
+    /// panel with a "Show" softkey) plus the status-bar envelope while count > 0.
     void setPendingCount(int count);
     int pendingCount() const { return m_pending; }
 
@@ -33,6 +35,7 @@ private:
     bool m_vibrate;
     bool m_popups;
     int m_pending;
+    void *m_view;   // the registered Avkon view (Symbian only)
 };
 
 #endif // NOTIFIER_H

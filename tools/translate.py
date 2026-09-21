@@ -125,6 +125,8 @@ RU = {
     "Authorization request": "Запрос авторизации",
     "Authorize": "Авторизовать",
     "Decline": "Отклонить",
+    "Log": "Журнал",
+    "Copy log": "Скопировать журнал",
 }
 
 UK = {
@@ -242,6 +244,8 @@ UK = {
     "Authorization request": "Запит авторизації",
     "Authorize": "Авторизувати",
     "Decline": "Відхилити",
+    "Log": "Журнал",
+    "Copy log": "Скопіювати журнал",
 }
 
 
