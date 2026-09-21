@@ -7,7 +7,9 @@
         <file>qml/MessageDelegate.qml</file>
         <file>qml/SettingsPage.qml</file>
         <file>qml/main.qml</file>
+        <file>images/daisy_dnd.png</file>
         <file>images/daisy_green.png</file>
+        <file>images/daisy_occupied.png</file>
         <file>images/daisy_red.png</file>
         <file>images/daisy_white.png</file>
         <file>images/daisy_yellow.png</file>

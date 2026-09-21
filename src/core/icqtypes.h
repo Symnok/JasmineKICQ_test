@@ -30,16 +30,18 @@ namespace Icq
         StatusWork      = 0x6000
     };
 
-    /// The four daisies the UI shows for a contact.
-    enum StatusColor { Green, Yellow, Red, White };
+    /// The daisies the UI shows: green online, yellow away, green with a badge for busy,
+    /// red offline (the classic ICQ convention), white when the status is not known.
+    enum StatusColor { Green, Yellow, Dnd, Occupied, Red, White };
 
     inline StatusColor statusColor(int status)
     {
+        if (status < 0) return Red;
         switch (status & 0xFFFF) {
-        case StatusOffline & 0xFFFF: return White;
         case StatusAway: case StatusNa: case 0x0005: return Yellow;
-        case StatusDnd: case StatusOccupied: case 0x0011: case 0x0013: return Red;
-        default: return status < 0 ? White : Green;
+        case StatusDnd: case 0x0013: return Dnd;
+        case StatusOccupied: case 0x0011: return Occupied;
+        default: return Green;
         }
     }
 

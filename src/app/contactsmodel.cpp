@@ -61,14 +61,25 @@ int ContactsModel::rowCount(const QModelIndex &parent) const
     return parent.isValid() ? 0 : m_rows.size();
 }
 
-QString ContactsModel::statusIcon(int status)
+QString ContactsModel::statusIcon(int status, bool unknown)
 {
+    if (unknown) return QLatin1String("daisy_white.png");
     switch (Icq::statusColor(status)) {
     case Icq::Green: return QLatin1String("daisy_green.png");
     case Icq::Yellow: return QLatin1String("daisy_yellow.png");
+    case Icq::Dnd: return QLatin1String("daisy_dnd.png");
+    case Icq::Occupied: return QLatin1String("daisy_occupied.png");
     case Icq::Red: return QLatin1String("daisy_red.png");
     default: return QLatin1String("daisy_white.png");
     }
+}
+
+/// White daisy: the server will never report this contact's status - not on the server-side
+/// list, or still awaiting authorization. (Offline contacts get no presence packet at all,
+/// so "nothing received" simply means offline: red.)
+static bool statusUnknown(const IcqContact &c, bool)
+{
+    return c.temporary || !c.authorized;
 }
 
 QString ContactsModel::statusText(int status)
@@ -106,7 +117,7 @@ QVariant ContactsModel::data(const QModelIndex &index, int role) const
         return g.name;
     }
     case StatusRole: return c.status;
-    case StatusIconRole: return QLatin1String("qrc:/images/") + statusIcon(c.status);
+    case StatusIconRole: return QLatin1String("qrc:/images/") + statusIcon(c.status, statusUnknown(c, m_session->isOnline()));
     case StatusTextRole: return statusText(c.status);
     case XStatusIconRole:
         return (c.xstatus >= 0 && c.xstatus < Icq::XStatusCount)
@@ -193,7 +204,7 @@ QVariantMap ContactsModel::contactInfo(const QString &uin) const
         m.insert(QLatin1String("uin"), uin);
         m.insert(QLatin1String("nick"), uin);
         m.insert(QLatin1String("status"), int(Icq::StatusOffline));
-        m.insert(QLatin1String("statusIcon"), QLatin1String("qrc:/images/") + statusIcon(Icq::StatusOffline));
+        m.insert(QLatin1String("statusIcon"), QLatin1String("qrc:/images/") + statusIcon(Icq::StatusOffline, true));
         m.insert(QLatin1String("statusText"), statusText(Icq::StatusOffline));
         m.insert(QLatin1String("online"), false);
         m.insert(QLatin1String("typing"), false);
@@ -206,7 +217,7 @@ QVariantMap ContactsModel::contactInfo(const QString &uin) const
     m.insert(QLatin1String("uin"), c.uin);
     m.insert(QLatin1String("nick"), c.nick.isEmpty() ? c.uin : c.nick);
     m.insert(QLatin1String("status"), c.status);
-    m.insert(QLatin1String("statusIcon"), QLatin1String("qrc:/images/") + statusIcon(c.status));
+    m.insert(QLatin1String("statusIcon"), QLatin1String("qrc:/images/") + statusIcon(c.status, statusUnknown(c, m_session->isOnline())));
     m.insert(QLatin1String("statusText"), statusText(c.status));
     m.insert(QLatin1String("online"), c.online());
     m.insert(QLatin1String("typing"), c.typing);

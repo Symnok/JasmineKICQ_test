@@ -63,8 +63,9 @@ public:
     int unread(const QString &uin) const { return m_unread.value(uin, 0); }
     void setUnread(const QString &uin, int n);
     void setLastText(const QString &uin, const QString &text);
-    /// Daisy image for a wire status: "daisy_green.png" etc.
-    static QString statusIcon(int status);
+    /// Daisy image for a wire status: "daisy_green.png" etc.; unknown = no presence yet,
+    /// not on the server list or awaiting authorization (white).
+    static QString statusIcon(int status, bool unknown = false);
     static QString statusText(int status);
 
 public slots:

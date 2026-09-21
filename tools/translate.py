@@ -14,8 +14,8 @@ RU = {
     "version %1": "версия %1",
     "An ICQ client for the kicq.ru server, ported from Jasmine IM for Android to Symbian Anna/Belle.":
         "ICQ-клиент для сервера kicq.ru, перенесённый с Jasmine IM для Android на Symbian Anna/Belle.",
-    "Statuses: green - online, yellow - away, red - busy, white - offline. Messages to offline contacts are stored by the server only when they are pure Latin, or Cyrillic without digits and punctuation - a limitation of the server.":
-        "Статусы: зелёный — в сети, жёлтый — отошёл, красный — занят, белый — не в сети. Сообщения контактам не в сети сервер сохраняет только если они целиком латиницей или кириллицей без цифр и знаков препинания — ограничение сервера.",
+    "Statuses: green - online, yellow - away, green with a badge - busy, red - offline, white - unknown (not on the server list or not yet authorized). Messages to offline contacts are stored by the server only when they are pure Latin, or Cyrillic without digits and punctuation - a limitation of the server.":
+        "Статусы: зелёный — в сети, жёлтый — отошёл, зелёный со значком — занят, красный — не в сети, белый — неизвестен (нет в списке на сервере или ещё не авторизован). Сообщения контактам не в сети сервер сохраняет только если они целиком латиницей или кириллицей без цифр и знаков препинания — ограничение сервера.",
     "Enter your UIN and password.": "Введите UIN и пароль.",
     "Connection lost: %1. Reconnecting...": "Соединение потеряно: %1. Переподключение...",
     "%1 (%2) asks for your authorization.": "%1 (%2) запрашивает авторизацию.",
@@ -133,8 +133,8 @@ UK = {
     "version %1": "версія %1",
     "An ICQ client for the kicq.ru server, ported from Jasmine IM for Android to Symbian Anna/Belle.":
         "ICQ-клієнт для сервера kicq.ru, перенесений з Jasmine IM для Android на Symbian Anna/Belle.",
-    "Statuses: green - online, yellow - away, red - busy, white - offline. Messages to offline contacts are stored by the server only when they are pure Latin, or Cyrillic without digits and punctuation - a limitation of the server.":
-        "Статуси: зелений — у мережі, жовтий — відійшов, червоний — зайнятий, білий — не в мережі. Повідомлення контактам не в мережі сервер зберігає лише якщо вони повністю латиницею або кирилицею без цифр і розділових знаків — обмеження сервера.",
+    "Statuses: green - online, yellow - away, green with a badge - busy, red - offline, white - unknown (not on the server list or not yet authorized). Messages to offline contacts are stored by the server only when they are pure Latin, or Cyrillic without digits and punctuation - a limitation of the server.":
+        "Статуси: зелений — у мережі, жовтий — відійшов, зелений зі значком — зайнятий, червоний — не в мережі, білий — невідомий (немає в списку на сервері або ще не авторизований). Повідомлення контактам не в мережі сервер зберігає лише якщо вони повністю латиницею або кирилицею без цифр і розділових знаків — обмеження сервера.",
     "Enter your UIN and password.": "Введіть UIN і пароль.",
     "Connection lost: %1. Reconnecting...": "З'єднання втрачено: %1. Повторне підключення...",
     "%1 (%2) asks for your authorization.": "%1 (%2) просить авторизацію.",

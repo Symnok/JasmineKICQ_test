@@ -7,7 +7,7 @@
 
 TEMPLATE = app
 TARGET = JasmineKICQ
-VERSION = 0.1.12
+VERSION = 0.1.13
 
 QT += core gui network declarative
 

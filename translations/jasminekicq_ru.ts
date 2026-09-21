@@ -14,8 +14,8 @@
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="45" />
-        <source>Statuses: green - online, yellow - away, red - busy, white - offline. Messages to offline contacts are stored by the server only when they are pure Latin, or Cyrillic without digits and punctuation - a limitation of the server.</source>
-        <translation>Статусы: зелёный — в сети, жёлтый — отошёл, красный — занят, белый — не в сети. Сообщения контактам не в сети сервер сохраняет только если они целиком латиницей или кириллицей без цифр и знаков препинания — ограничение сервера.</translation>
+        <source>Statuses: green - online, yellow - away, green with a badge - busy, red - offline, white - unknown (not on the server list or not yet authorized). Messages to offline contacts are stored by the server only when they are pure Latin, or Cyrillic without digits and punctuation - a limitation of the server.</source>
+        <translation>Статусы: зелёный — в сети, жёлтый — отошёл, зелёный со значком — занят, красный — не в сети, белый — неизвестен (нет в списке на сервере или ещё не авторизован). Сообщения контактам не в сети сервер сохраняет только если они целиком латиницей или кириллицей без цифр и знаков препинания — ограничение сервера.</translation>
     </message>
     <message>
         <location filename="../qml/AboutPage.qml" line="55" />
@@ -207,17 +207,17 @@
 <context>
     <name>ContactsModel</name>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="105" />
+        <location filename="../src/app/contactsmodel.cpp" line="116" />
         <source>Not in list</source>
         <translation>Не в списке</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="122" />
+        <location filename="../src/app/contactsmodel.cpp" line="133" />
         <source>typing...</source>
         <translation>печатает...</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="123" />
+        <location filename="../src/app/contactsmodel.cpp" line="134" />
         <source>awaiting authorization</source>
         <translation>ожидает авторизации</translation>
     </message>
@@ -569,68 +569,68 @@
 <context>
     <name>Status</name>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="76" />
+        <location filename="../src/app/contactsmodel.cpp" line="87" />
         <source>Offline</source>
         <translation>Не в сети</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="78" />
-        <location filename="../src/app/contactsmodel.cpp" line="90" />
+        <location filename="../src/app/contactsmodel.cpp" line="89" />
+        <location filename="../src/app/contactsmodel.cpp" line="101" />
         <source>Online</source>
         <translation>В сети</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="79" />
+        <location filename="../src/app/contactsmodel.cpp" line="90" />
         <source>Away</source>
         <translation>Отошёл</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="80" />
+        <location filename="../src/app/contactsmodel.cpp" line="91" />
         <source>Not available</source>
         <translation>Недоступен</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="81" />
+        <location filename="../src/app/contactsmodel.cpp" line="92" />
         <source>Occupied</source>
         <translation>Занят</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="82" />
+        <location filename="../src/app/contactsmodel.cpp" line="93" />
         <source>Do not disturb</source>
         <translation>Не беспокоить</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="83" />
+        <location filename="../src/app/contactsmodel.cpp" line="94" />
         <source>Free for chat</source>
         <translation>Готов поболтать</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="84" />
+        <location filename="../src/app/contactsmodel.cpp" line="95" />
         <source>Invisible</source>
         <translation>Невидимый</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="85" />
+        <location filename="../src/app/contactsmodel.cpp" line="96" />
         <source>Lunch</source>
         <translation>Обед</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="86" />
+        <location filename="../src/app/contactsmodel.cpp" line="97" />
         <source>Evil</source>
         <translation>Злой</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="87" />
+        <location filename="../src/app/contactsmodel.cpp" line="98" />
         <source>Depressed</source>
         <translation>Депрессия</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="88" />
+        <location filename="../src/app/contactsmodel.cpp" line="99" />
         <source>At home</source>
         <translation>Дома</translation>
     </message>
     <message>
-        <location filename="../src/app/contactsmodel.cpp" line="89" />
+        <location filename="../src/app/contactsmodel.cpp" line="100" />
         <source>At work</source>
         <translation>На работе</translation>
     </message>

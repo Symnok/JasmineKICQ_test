@@ -42,7 +42,7 @@ Page {
                 wrapMode: Text.Wrap
                 font.pixelSize: platformStyle.fontSizeSmall
                 color: platformStyle.colorNormalMid
-                text: qsTr("Statuses: green - online, yellow - away, red - busy, white - offline. Messages to offline contacts are stored by the server only when they are pure Latin, or Cyrillic without digits and punctuation - a limitation of the server.")
+                text: qsTr("Statuses: green - online, yellow - away, green with a badge - busy, red - offline, white - unknown (not on the server list or not yet authorized). Messages to offline contacts are stored by the server only when they are pure Latin, or Cyrillic without digits and punctuation - a limitation of the server.")
             }
             Label {
                 width: parent.width

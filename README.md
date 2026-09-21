@@ -5,8 +5,8 @@ An ICQ (OSCAR) client for Symbian Anna/Belle that talks to the kicq.ru server, p
 SimpleOKM-Symbian and SimpleVKM-Symbian.
 
 What it does: XOR ("roasted") login, the server-side contact list with groups, add / remove /
-rename contacts, authorization requests both ways, presence with the four daisies (green
-online, yellow away, red busy, white offline) and the contacts' X-status icons, messaging on
+rename contacts, authorization requests both ways, presence with the daisies (green online, yellow
+away, green with a badge busy, red offline, white unknown) and the contacts' X-status icons, messaging on
 channel 1 and the server-relay channel with delivery marks, typing notifications, offline
 messages, local history, reconnection, and Symbian discreet popups + vibration for messages
 that arrive while another app is in front. No TLS (the server has none), no file transfer.
