@@ -142,7 +142,7 @@ Page {
         Button {
             id: sendButton
             anchors { right: parent.right; rightMargin: platformStyle.paddingSmall; verticalCenter: parent.verticalCenter }
-            width: 80
+            width: Math.max(80, implicitWidth)
             text: qsTr("Send")
             enabled: composer.text.length > 0 && chat.uin != "" && app.connection == "online"
             onClicked: {
