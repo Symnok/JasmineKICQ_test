@@ -7,7 +7,7 @@
 
 TEMPLATE = app
 TARGET = JasmineKICQ
-VERSION = 0.1.16
+VERSION = 0.1.17
 
 QT += core gui network declarative
 
@@ -52,14 +52,10 @@ symbian {
     TARGET.EPOCSTACKSIZE = 0x14000
     ICON = icon.svg
 
-    # Notifier: discreet popups (avkon), soft notifications + status-bar envelope (aknnotify),
-    # vibration (hwrm); the soft notification texts are a compiled resource deployed with the app.
-    LIBS += -lavkon -laknnotify -laknnotifyplugin -lhwrmvibraclient -lcone -leikcore -lefsrv
+    # Notifier: discreet popups (avkon), the "new messages" global query + status-bar
+    # envelope (aknnotify), vibration (hwrm), bringing the app forward (apgrfx, ws32).
+    LIBS += -lavkon -laknnotify -lhwrmvibraclient -lcone -leikcore -lapgrfx -lws32
     INCLUDEPATH += $$[QT_INSTALL_PREFIX]/epoc32/include/platform/mw
-    MMP_RULES += "SOURCEPATH ." "START RESOURCE kicqnotes.rss" "HEADER" "TARGETPATH resource\apps" "END"
-    notes.sources = $${EPOCROOT}epoc32/data/z/resource/apps/kicqnotes.rsc
-    notes.path = /resource/apps
-    DEPLOYMENT += notes
 
     # Qt Quick Components for Symbian (built into Belle; Anna gets them through the Smart
     # Installer package, JasmineKICQ_installer.sis).

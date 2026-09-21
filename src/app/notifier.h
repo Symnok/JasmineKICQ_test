@@ -26,8 +26,8 @@ public:
     void notify(const QString &title, const QString &text);
     /// Just the vibration, e.g. for an authorization request.
     void vibrate(int ms = 400);
-    /// Persistent "N new messages" entry (soft notification, shown in the notification
-    /// panel with a "Show" softkey) plus the status-bar envelope while count > 0.
+    /// "N new messages" query with a "Show" softkey that raises the app (a global query,
+    /// answered in this process), plus the status-bar envelope while count > 0.
     void setPendingCount(int count);
     int pendingCount() const { return m_pending; }
 
@@ -35,7 +35,9 @@ private:
     bool m_vibrate;
     bool m_popups;
     int m_pending;
-    void *m_view;   // the registered Avkon view (Symbian only)
+    static QString pendingText(int count);
+
+    void *m_query;   // the global query and its active object (Symbian only)
 };
 
 #endif // NOTIFIER_H

@@ -189,17 +189,17 @@
         <translation>Повторить</translation>
     </message>
     <message>
-        <location filename="../qml/ChatPage.qml" line="121" />
+        <location filename="../qml/ChatPage.qml" line="122" />
         <source>No messages yet.</source>
         <translation>Сообщений пока нет.</translation>
     </message>
     <message>
-        <location filename="../qml/ChatPage.qml" line="137" />
+        <location filename="../qml/ChatPage.qml" line="138" />
         <source>message</source>
         <translation>сообщение</translation>
     </message>
     <message>
-        <location filename="../qml/ChatPage.qml" line="146" />
+        <location filename="../qml/ChatPage.qml" line="147" />
         <source>Send</source>
         <translation>Отправить</translation>
     </message>
@@ -384,22 +384,22 @@
         <translation>не в сети</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="345" />
+        <location filename="../qml/ContactsPage.qml" line="347" />
         <source>The contact list is empty. Tap + to add someone.</source>
         <translation>Список контактов пуст. Нажмите +, чтобы добавить кого-нибудь.</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="345" />
+        <location filename="../qml/ContactsPage.qml" line="347" />
         <source>Nobody is online.</source>
         <translation>Никого нет в сети.</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="346" />
+        <location filename="../qml/ContactsPage.qml" line="348" />
         <source>Connecting...</source>
         <translation>Подключение...</translation>
     </message>
     <message>
-        <location filename="../qml/ContactsPage.qml" line="346" />
+        <location filename="../qml/ContactsPage.qml" line="348" />
         <source>Offline. Use the menu to connect.</source>
         <translation>Не в сети. Подключитесь через меню.</translation>
     </message>
@@ -510,9 +510,22 @@
         <translation>печатает...</translation>
     </message>
     <message>
-        <location filename="../src/app/messagesmodel.cpp" line="199" />
+        <location filename="../src/app/messagesmodel.cpp" line="197" />
         <source>Not connected.</source>
         <translation>Нет соединения.</translation>
+    </message>
+</context>
+<context>
+    <name>Notifier</name>
+    <message>
+        <location filename="../src/app/notifier.cpp" line="162" />
+        <source>JasmineKICQ: new message</source>
+        <translation>JasmineKICQ: новое сообщение</translation>
+    </message>
+    <message>
+        <location filename="../src/app/notifier.cpp" line="162" />
+        <source>JasmineKICQ: %1 new messages</source>
+        <translation>JasmineKICQ: новых сообщений: %1</translation>
     </message>
 </context>
 <context>

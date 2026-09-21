@@ -103,6 +103,8 @@ RU = {
     "App language": "Язык приложения",
     "System default": "Как в системе",
     "Popup for new messages": "Уведомление о новых сообщениях",
+    "JasmineKICQ: new message": "JasmineKICQ: новое сообщение",
+    "JasmineKICQ: %1 new messages": "JasmineKICQ: новых сообщений: %1",
     "Vibrate": "Вибрация",
     "Used when a message arrives while another application is in front. JasmineKICQ stays connected in the background.":
         "Срабатывает, когда сообщение приходит, пока открыто другое приложение. JasmineKICQ остаётся подключённым в фоне.",
@@ -222,6 +224,8 @@ UK = {
     "App language": "Мова застосунку",
     "System default": "Як у системі",
     "Popup for new messages": "Сповіщення про нові повідомлення",
+    "JasmineKICQ: new message": "JasmineKICQ: нове повідомлення",
+    "JasmineKICQ: %1 new messages": "JasmineKICQ: нових повідомлень: %1",
     "Vibrate": "Вібрація",
     "Used when a message arrives while another application is in front. JasmineKICQ stays connected in the background.":
         "Спрацьовує, коли повідомлення надходить, поки відкрито інший застосунок. JasmineKICQ залишається підключеним у фоні.",

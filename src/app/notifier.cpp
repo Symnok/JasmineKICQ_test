@@ -8,18 +8,14 @@
 
 #ifdef Q_OS_SYMBIAN
 #include <akndiscreetpopup.h>
+#include <AknGlobalConfirmationQuery.h>
 #include <AknSmallIndicator.h>
-#include <AknSoftNotifier.h>
-#include <AknSoftNotificationParameters.h>
+#include <apgtask.h>
 #include <avkon.hrh>
 #include <avkon.rsg>
-#include <coeaui.h>
 #include <coemain.h>
-#include <coeview.h>
 #include <e32std.h>
-#include <f32file.h>
 #include <hwrmvibra.h>
-#include <kicqnotes.rsg>
 
 #ifndef KICQ_UID3
 #define KICQ_UID3 0xE2C9A7D1
@@ -27,48 +23,69 @@
 
 namespace
 {
-    const TInt KNotificationViewId = 1;
-
-    _LIT(KNotesFile, "kicqnotes.rsc");
-    _LIT(KNotesDir, "\\resource\\apps\\");
-
     TPtrC ptr(const QString &s)
     {
         return TPtrC(reinterpret_cast<const TUint16 *>(s.utf16()), s.length());
     }
 
-    /// A Qt application has no Avkon views, and a soft notification's "Show" softkey works
-    /// by activating a view. This registers one: activating it (from the notification, or
-    /// from anything else that knows the UID) brings the application to the front.
-    class NotificationView : public MCoeView
+    /// Brings this application's window group to the front, whatever is over it.
+    void raiseApplication()
+    {
+        CCoeEnv *env = CCoeEnv::Static();
+        if (env) {
+            TApaTask task(env->WsSession());
+            task.SetWgId(env->RootWin().Identifier());
+            task.BringToForeground();
+        }
+        QWidget *w = QApplication::activeWindow();
+        if (!w) {
+            QWidgetList tops = QApplication::topLevelWidgets();
+            if (!tops.isEmpty()) w = tops.first();
+        }
+        if (w) { w->raise(); w->activateWindow(); }
+    }
+
+    /// The "N new messages" query shown over whatever is in front. It is a global query
+    /// rather than a soft notification: the answer comes back to this process, so "Show"
+    /// simply raises the application here instead of asking the view server to do it.
+    class PendingQuery : public CActive
     {
     public:
-        NotificationView() : m_registered(false)
+        static PendingQuery *NewL()
         {
-            CCoeAppUi *ui = CCoeEnv::Static() ? CCoeEnv::Static()->AppUi() : 0;
-            if (!ui) return;
-            TRAPD(err, ui->RegisterViewL(*this));
-            m_registered = err == KErrNone;
-            if (err != KErrNone) qWarning() << "view registration failed:" << err;
+            PendingQuery *q = new (ELeave) PendingQuery();
+            CleanupStack::PushL(q);
+            q->iQuery = CAknGlobalConfirmationQuery::NewL();
+            CleanupStack::Pop(q);
+            return q;
         }
-        ~NotificationView()
+        ~PendingQuery()
         {
-            CCoeAppUi *ui = CCoeEnv::Static() ? CCoeEnv::Static()->AppUi() : 0;
-            if (ui && m_registered) ui->DeregisterView(*this);
+            Cancel();
+            delete iQuery;
+            delete iPrompt;
         }
-        TVwsViewId ViewId() const { return TVwsViewId(TUid::Uid(KICQ_UID3), TUid::Uid(KNotificationViewId)); }
-        void ViewActivatedL(const TVwsViewId &, TUid, const TDesC8 &)
+        // the prompt must outlive the request: the notifier server reads it later
+        void ShowL(const QString &text)
         {
-            QWidget *w = QApplication::activeWindow();
-            if (!w) {
-                QWidgetList tops = QApplication::topLevelWidgets();
-                if (!tops.isEmpty()) w = tops.first();
-            }
-            if (w) { w->showFullScreen(); w->raise(); w->activateWindow(); }
+            Cancel();
+            delete iPrompt;
+            iPrompt = 0;
+            iPrompt = ptr(text).AllocL();
+            iQuery->ShowConfirmationQueryL(iStatus, *iPrompt, R_AVKON_SOFTKEYS_SHOW_CANCEL);
+            SetActive();
         }
-        void ViewDeactivated() {}
     private:
-        bool m_registered;
+        PendingQuery() : CActive(EPriorityStandard), iQuery(0), iPrompt(0) { CActiveScheduler::Add(this); }
+        void RunL()
+        {
+            TInt key = iStatus.Int();
+            if (key == EAknSoftkeyShow || key == EAknSoftkeyOk || key == EAknSoftkeyYes) raiseApplication();
+            else if (key < 0 && key != KErrCancel) qWarning() << "notification query failed:" << key;
+        }
+        void DoCancel() { iQuery->CancelConfirmationQuery(); }
+        CAknGlobalConfirmationQuery *iQuery;
+        HBufC *iPrompt;
     };
 
     void showPopupL(const QString &title, const QString &text)
@@ -95,46 +112,24 @@ namespace
         ind->SetIndicatorStateL(on ? EAknIndicatorStateOn : EAknIndicatorStateOff);
         CleanupStack::PopAndDestroy(ind);
     }
-
-    // The soft notification parameters point at the note resource installed with the app;
-    // the file is looked up on the drives, as the user may have installed to E: or F:.
-    // "Show" activates the view registered above, which brings the app forward.
-    CAknSoftNotificationParameters *notificationParamsL()
-    {
-        RFs &fs = CCoeEnv::Static()->FsSession();
-        TFindFile finder(fs);
-        User::LeaveIfError(finder.FindByDir(KNotesFile, KNotesDir));
-        CAknSoftNotificationParameters *p = CAknSoftNotificationParameters::NewL(
-            finder.File(), R_KICQ_NOTE_MESSAGE, 0, R_AVKON_SOFTKEYS_SHOW_EXIT, CAknNoteDialog::ENoTone,
-            TVwsViewId(TUid::Uid(KICQ_UID3), TUid::Uid(KNotificationViewId)), TUid::Uid(0), EAknSoftkeyShow, KNullDesC8);
-        p->SetGroupedTexts(R_KICQ_GROUPED_TEXTS);
-        return p;
-    }
-
-    void setSoftNotificationL(int count)
-    {
-        CAknSoftNotificationParameters *params = notificationParamsL();
-        CleanupStack::PushL(params);
-        CAknSoftNotifier *notifier = CAknSoftNotifier::NewLC();
-        if (count > 0) notifier->SetCustomNotificationCountL(*params, count);
-        else notifier->CancelCustomSoftNotificationL(*params);
-        CleanupStack::PopAndDestroy(2, params);
-    }
 }
 #endif
 
 Notifier::Notifier(QObject *parent)
-    : QObject(parent), m_vibrate(true), m_popups(true), m_pending(0), m_view(0)
+    : QObject(parent), m_vibrate(true), m_popups(true), m_pending(0), m_query(0)
 {
 #ifdef Q_OS_SYMBIAN
-    m_view = new NotificationView();
+    PendingQuery *q = 0;
+    TRAPD(err, q = PendingQuery::NewL());
+    if (err != KErrNone) qWarning() << "notification query unavailable:" << err;
+    m_query = q;
 #endif
 }
 
 Notifier::~Notifier()
 {
 #ifdef Q_OS_SYMBIAN
-    delete static_cast<NotificationView *>(m_view);
+    delete static_cast<PendingQuery *>(m_query);
 #endif
 }
 
@@ -162,18 +157,29 @@ void Notifier::vibrate(int ms)
 #endif
 }
 
+QString Notifier::pendingText(int count)
+{
+    return count == 1 ? tr("JasmineKICQ: new message") : tr("JasmineKICQ: %1 new messages").arg(count);
+}
+
 void Notifier::setPendingCount(int count)
 {
     if (count < 0) count = 0;
     if (count == m_pending) return;
     m_pending = count;
 #ifdef Q_OS_SYMBIAN
-    TInt err = KErrNone;
-    TRAP(err, setSoftNotificationL(count));
-    if (err != KErrNone) qWarning() << "soft notification failed:" << err;
-    TRAP(err, setEnvelopeL(count > 0));
+    PendingQuery *q = static_cast<PendingQuery *>(m_query);
+    if (q) {
+        if (count > 0) {
+            TRAPD(err, q->ShowL(pendingText(count)));
+            if (err != KErrNone) qWarning() << "notification query failed:" << err;
+        } else {
+            q->Cancel();
+        }
+    }
+    TRAPD(err, setEnvelopeL(count > 0));
     if (err != KErrNone) qWarning() << "envelope indicator failed:" << err;
 #else
-    qDebug() << "NOTIFICATION count" << count;
+    qDebug() << "NOTIFICATION" << pendingText(count);
 #endif
 }
