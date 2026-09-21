@@ -294,15 +294,16 @@ Page {
                 ListItemText {
                     width: parent.width
                     role: "Title"
-                    // nickname and UIN together; a contact without a nickname is just the UIN
-                    text: model.nick != model.uin ? model.nick + "  " + model.uin : model.uin
+                    text: model.nick
                     elide: Text.ElideRight
                     color: model.online ? platformStyle.colorNormalLight : platformStyle.colorNormalMid
                 }
                 ListItemText {
                     width: parent.width
                     role: "SubTitle"
-                    text: model.subtitle
+                    // the UIN, then what is going on: typing / away text / last message / status
+                    text: model.nick != model.uin && model.subtitle != "" ? model.uin + "  ·  " + model.subtitle
+                        : (model.nick != model.uin ? model.uin : model.subtitle)
                     elide: Text.ElideRight
                     visible: text != ""
                     color: model.typing ? "#8fd18f" : platformStyle.colorNormalMid
